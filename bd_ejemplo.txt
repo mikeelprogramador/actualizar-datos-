@@ -1,0 +1,17 @@
+create schema bd_ejemplo;
+use bd_ejemplo; 
+
+create table tb_usuarios(
+documento int not null primary key,
+nombre varchar(150) not null, 
+fecha_nac varchar(50) not null,
+foto varchar(2000)  null
+);
+drop table tb_usuarios; 
+select * from tb_usuarios; 
+truncate tb_usuarios; 
+
+alter table tb_usuarios
+add contraseña varchar(200) null; 
+
+select nombre from tb_usuarios where documento = '1';
